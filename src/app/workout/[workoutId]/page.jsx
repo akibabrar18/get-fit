@@ -1,7 +1,12 @@
 import React from "react";
 import WorkeroutIdCard from "@/components/homePage/WorkoutIdCard";
 const getWorkoutData = async (id) => {
-  const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`);
+  const res = await fetch(
+    `https://api.abcz.workers.dev/api/fitlog/${id}`,
+    {
+      cache: "force-cache",
+    },
+  );
   if (!res.ok) {
     throw new Error("Failed to fetch workout data");
   }

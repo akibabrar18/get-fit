@@ -99,9 +99,7 @@ const WorkoutIdCard = ({ workout }) => {
           
           <div className="flex flex-wrap items-center gap-3 pt-6 mt-4">
             
-            <PlanBtn id={workout.id} workout={workout} />
-
-            
+            <PlanBtn id={workout.id} workout={workout} />     
             <SaveBtn id={workout.id} workout={workout} />
           </div>
         </div>

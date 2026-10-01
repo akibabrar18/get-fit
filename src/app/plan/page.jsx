@@ -2,7 +2,7 @@
 import React, { useContext, useState } from "react";
 import { workoutContext } from "@/context/WorkoutContextProvider";
 import Link from "next/link";
-import PlanCard from "@/components/saved&plan/PlanCard";
+import PlanCard from "@/components/saved-plan/PlanCard";
 
 const item = (
   <>

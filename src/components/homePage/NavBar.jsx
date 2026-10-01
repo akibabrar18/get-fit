@@ -1,6 +1,7 @@
 "use client";
+import { workoutContext } from "@/context/WorkoutContextProvider";
 
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -8,6 +9,11 @@ import logo from "@/assets/logo.png";
 
 
 const NavBar = ({ planCount = 0, savedCount = 0 }) => {
+  const context= useContext(workoutContext);
+  if (!context) {
+    throw new Error("NavBar must be used within a WorkoutContextProvider");
+  }
+  const { plan, saved } = context;
   const pathname = usePathname();
 
   const navLinks = [
@@ -102,7 +108,7 @@ const NavBar = ({ planCount = 0, savedCount = 0 }) => {
           >
             <span>Plan</span>
             <span className="flex items-center justify-center min-w-5 h-5 px-1 rounded-full bg-[#bbf426] text-black font-bold text-xs">
-              {planCount}
+              {plan.length}
             </span>
           </Link>
 
@@ -112,7 +118,7 @@ const NavBar = ({ planCount = 0, savedCount = 0 }) => {
           >
             <span>Saved</span>
             <span className="flex items-center justify-center min-w-5 h-5 px-1 rounded-full bg-neutral-800 border border-neutral-700 text-neutral-400 font-semibold text-xs">
-              {savedCount}
+              {saved.length}
             </span>
           </Link>
         </div>

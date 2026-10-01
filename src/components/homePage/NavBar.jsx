@@ -8,7 +8,8 @@ import { usePathname } from "next/navigation";
 import logo from "@/assets/logo.png";
 
 
-const NavBar = ({ planCount = 0, savedCount = 0 }) => {
+
+const NavBar = () => {
   const context= useContext(workoutContext);
   if (!context) {
     throw new Error("NavBar must be used within a WorkoutContextProvider");

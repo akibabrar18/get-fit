@@ -19,7 +19,7 @@ const WorkoutIdCard = ({ workout }) => {
   return (
     <div className="min-h-screen p-4 sm:p-8 flex items-center justify-center font-sans text-white">
       <div className="container mx-auto bg-[#14161b] rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row gap-8 shadow-2xl">
-        {/* Left Column: Image */}
+        
         <div className="w-full md:w-1/2 flex-shrink-0">
           <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-[#1e222b]">
             <Image
@@ -32,10 +32,10 @@ const WorkoutIdCard = ({ workout }) => {
           </div>
         </div>
 
-        {/* Right Column: Workout Details */}
+        
         <div className="w-full md:w-1/2 flex flex-col justify-between">
           <div className="space-y-4">
-            {/* Header */}
+            
             <div>
               <h1 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
                 {workout.name}
@@ -46,7 +46,7 @@ const WorkoutIdCard = ({ workout }) => {
               </p>
             </div>
 
-            {/* Muscle Group Badges */}
+            
             <div className="flex flex-wrap gap-2 pt-1">
               {workout.muscleGroups?.map((group, index) => (
                 <span
@@ -58,7 +58,7 @@ const WorkoutIdCard = ({ workout }) => {
               ))}
             </div>
 
-            {/* Key Specs Table */}
+            
             <div className="bg-[#181b22] rounded-xl px-4 py-1 divide-y divide-gray-800/80">
               {stats.map((item, idx) => (
                 <div
@@ -76,7 +76,7 @@ const WorkoutIdCard = ({ workout }) => {
               ))}
             </div>
 
-            {/* Instructions */}
+            
             <div className="pt-2">
               <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-2.5">
                 INSTRUCTIONS
@@ -96,12 +96,12 @@ const WorkoutIdCard = ({ workout }) => {
             </div>
           </div>
 
-          {/* Action Buttons */}
+          
           <div className="flex flex-wrap items-center gap-3 pt-6 mt-4">
-            {/* Add to Today's Plan */}
+            
             <PlanBtn id={workout.id} workout={workout} />
 
-            {/* Save for Later */}
+            
             <SaveBtn id={workout.id} workout={workout} />
           </div>
         </div>

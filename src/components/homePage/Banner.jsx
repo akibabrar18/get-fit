@@ -13,7 +13,7 @@ const Banner = () => {
               WORKOUT LIBRARY
             </span>
 
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white uppercase leading-[1.05]">
+            <h1 className="text-3xl sm:text-5xl md:text-5xl font-black tracking-tight text-white uppercase leading-[1.05]">
               TRAIN WITH INTENT. LOG EVERY SET.
             </h1>
 

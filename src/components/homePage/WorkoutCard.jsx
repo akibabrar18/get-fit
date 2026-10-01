@@ -17,7 +17,7 @@ const WorkoutCard = ({ workout }) => {
   return (
     <Link href={`/workout/${workout.id}`} className="block group">
       <div className="w-full max-w-sm overflow-hidden rounded-3xl bg-[#13161c] text-white shadow-xl transition-transform duration-300 hover:scale-[1.02]">
-        {/* Exercise Image */}
+        
         <div className="relative h-60 w-full overflow-hidden">
           <Image
             src={image}
@@ -28,9 +28,9 @@ const WorkoutCard = ({ workout }) => {
           />
         </div>
 
-        {/* Card Content */}
+        
         <div className="p-6">
-          {/* Muscle Group Badges */}
+          
           <div className="flex flex-wrap gap-2">
             {muscleGroups.map((group, index) => (
               <span
@@ -42,32 +42,32 @@ const WorkoutCard = ({ workout }) => {
             ))}
           </div>
 
-          {/* Title */}
+          
           <h3 className="mt-4 text-xl font-black uppercase tracking-wide text-white">
             {name}
           </h3>
 
-          {/* Equipment Subtitle */}
+          
           <p className="mt-1 text-sm font-medium text-gray-400">{equipment}</p>
 
-          {/* Divider */}
+          
           <hr className="my-5 border-[#232834]" />
 
-          {/* Metadata Footer */}
+          
           <div className="flex items-center space-x-6 text-sm font-medium text-gray-400">
-            {/* Duration */}
+            
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
               <span>{duration} min</span>
             </div>
 
-            {/* Calories */}
+            
             <div className="flex items-center gap-2">
               <Flame className="h-4 w-4" />
               <span>{caloriesBurned} kcal</span>
             </div>
 
-            {/* Rating */}
+            
             <div className="flex items-center gap-2">
               <Star className="h-4 w-4" />
               <span>{rating}</span>

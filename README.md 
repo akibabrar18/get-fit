@@ -1,0 +1,22 @@
+Get Fit 🏋️
+
+Get Fit is a workout management web application where users can explore different exercises, view workout details, create personalized workout plans, and save workouts for later.
+
+🛠️ Technologies Used
+
+* Next.js
+* React
+* JavaScript
+* HTML
+* CSS
+* PostCSS
+* DaisyUI
+* Tailwind CSS
+
+✨ Key Features
+
+1. Workout Library — Browse and explore a collection of different workouts.
+2. Workout Details — View detailed information about each workout.
+3. Add to Plan — Select workouts and add them to your personal workout plan.
+4. Save for Later — Save workouts that you want to try later.
+5. Plan & Saved Management — View and remove workouts from your plan, while the navigation bar displays the number of planned and saved workouts.

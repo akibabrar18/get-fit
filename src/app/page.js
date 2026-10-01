@@ -14,15 +14,18 @@ const page = async () => {
   const data = await getData();
   return (
     <div>
-      <Banner></Banner>
-      <div id="workouts" className="container mx-auto">
-        <h1 className="text-2xl font-bold text-white">THE LIBRARY</h1>
-        <p className=" text-sm sm:text-base text-neutral-400 max-w-lg leading-relaxed">
+      <Banner />
+      <div id="workouts" className="container mx-auto px-4">
+        <h1 className="text-2xl font-bold text-white text-center sm:text-left">
+          THE LIBRARY
+        </h1>
+        <p className="text-sm sm:text-base text-neutral-400 max-w-lg leading-relaxed text-center sm:text-left mx-auto sm:mx-0">
           Twelve lifts covering every major muscle group.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6 justify-items-center sm:justify-items-stretch">
           {
-            data.map((workout) => <WorkoutCard key={workout.id} workout={workout}></WorkoutCard>)
+            data.map((workout) => <WorkoutCard key={workout.id} workout={workout} />)
           }
         </div>
       </div>
